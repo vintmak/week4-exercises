@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Week 4 notes</title>
+	<style type="text/css">
+		#box1 {
+			background-color: yellow;
+			height: 300px;
+			width: 400px;
+			border: 10px green solid;
+			margin: 20px; /* creates distant left right top and bottom*/
+			padding: 10px; /* padding left, right, top, bottom - 10 px*/
+		}
+
+		#box2{
+			background-color: orange;
+			height: 200px;
+			width:	500px;
+			border: 5px blue dotted;
+			margin: 10px 30px; /* top and bottom : 10px, left and right 30px*/;
+			padding: 10px 20px 30px 40px; /*top right bottom left (clockwise)*/
+		}
+
+		#box3{
+			background-color: yellow;
+			height: 300px;
+			width:	300px;
+			border: 10px blue dotted;
+			padding: 10px;
+			margin: 10px auto; /* how you center a box, give the top bottom margin; then auto the left right*/
+		}
+		/* Descendant combinator - I want all the p inside div to have .. */
+		/* The child, the grandchild */
+		div p {
+			background-color: green;
+		}
+		/* Child selector - > Only the p that is directly inside div */
+		div > p  {
+			background-color: orange;
+		}
+		/* Siblings selector - > All the p that are next to the div */
+		div ~ p {
+			background-color: grey;
+		}
+		/* Next suibling selector - > The p that is next to the div */
+		div + p {
+			background-color: purple;
+		}
+	</style>
+</head>
+<body>
+<h1>Week 4 notes</h1>
+<h2>Layout and positioning</h2>
+<!--
+	CSS Box Model
+1) height
+2) width
+3) margin - the distance between element A and it's neighbour
+4) padding - the distance between element and it's inner element
+5) border - thickness, color, type
+
+-->
+
+
+<div id="box1">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div id="box2">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<div id="box3">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<hr>
+<h2>Selector</h2>
+<div>
+	<p>Paragraph 1 in div</p>
+	<p>Paragraph 2 in div</p>
+	<span><p>Paragraph 3 in div</p></span>
+</div>
+<p> Paragraph 3. Not in div</p>
+<p> Paragragh 4. Not in div</p>
+</body>
+</html>
